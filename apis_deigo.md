@@ -68,7 +68,7 @@ ____________________
 ## Install miniconda on deigo 
 ref: https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
 ### Download minconda installer 
-Download minconda installer (.sh) from https://docs.conda.io/en/latest/miniconda.html, and move it to deigo under any folder of /home.
+Download minconda installer (.sh) from https://docs.conda.io/en/latest/miniconda.html, and move it to deigo under any folder of /flash (instead of /home).
 ### Install miniconda 
 Install by running: `bash Miniconda3-latest-Linux-x86_64.sh`
 ### create conda env assining python version (3.9)
@@ -112,6 +112,12 @@ for example:
 `export PATH = $PATH:/home/y/yuzhe-li/apps/mongodb/bin`
 
 
+
+
+## Note: 
+better to run from /flash instead of /home 
+
+`Run All Jobs from the /flash filesystem, and read data directly from /bucket. It's big, very fast, and made for running jobs. The /home file system is too small for data sets or even large log files. /home is also very slow, so your job will run a lot slower than it needs to.`
 
 
 
