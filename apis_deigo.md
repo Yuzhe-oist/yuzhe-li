@@ -41,13 +41,11 @@ groopy is installed at: $HOME/.sdkman/candidates
 
 
 
-____________________
 
 
-
-## Build and Run APIS on deigo 
+## 3. Build and Run APIS on deigo 
 ### 1. Copy APIS to deigo 
-`scp locapath of apis-master yourname@deigo.oist.jp:/home/anypath`
+`scp -r localpath_of_apis-master yourname@deigo.oist.jp:/home/anypath`
 
 ### 2. Build 
 #### 1. ask for allocation computation node 
@@ -56,12 +54,14 @@ ____________________
 `make build`
 
 ### 3. Run 
-####1. aks for allocation computation node with x11
+#### 1. aks for allocation computation node with x11
 `srun -p compute -t 1:00:00 --x11 --pty bash`
 
 #### 2. run 
 `make run`
 
+
+____________________
 
 
 
