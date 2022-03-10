@@ -115,10 +115,15 @@ for example:
 
 
 ## Note: 
-better to run from /flash instead of /home 
+### 1. better to run from /flash instead of /home 
 
 `Run All Jobs from the /flash filesystem, and read data directly from /bucket. It's big, very fast, and made for running jobs. The /home file system is too small for data sets or even large log files. /home is also very slow, so your job will run a lot slower than it needs to.`
 
+### 2. sbatch is better than srun
+srun is quick and easy, but there are a few drawbacks.
+
+- If you log out or lose the connection to the cluster, your job will stop immediately.
+- You have no later record on how you ran your job. (no log file)
 
 
 
