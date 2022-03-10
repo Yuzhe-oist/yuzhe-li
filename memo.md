@@ -11,6 +11,59 @@
 - mave: (check by:'mvn --version` or `mvn -v`)
 - groovy:  (check by:`groovy --version`)
 - mongodb-org
+### Type IV: X-clinent on your local PC
+SSH is already installed on the Mac. If you want to display graphics, you first need to install a piece of software called XQuartz. The installation is straightforward:
+
+download Xquartz from this page
+click it to open.
+agree to the install.
+You may need to restart the computer to make it work.
+
+
+
+## 1. Quick install of mave and mongodb-org
+### 1. copy the binary source code to a folder under /home 
+you can copy from my folder on Deigo: `/home/y/yuzhe-li/apps`. 
+Or you can also find the download instructions  below. 
+### 2. Manually add the directory of bin to $PATH
+`export PATH="$PATH:$HOME/apps/maven/bin:$HOME/apps/mongodb/bin"`
+
+## 2. groovy: sdk install 
+ref: https://groovy-lang.org/install.html#_maven_repository
+### SDKMan install 
+Simply enter the following commands:
+- `curl -s get.sdkman.io | bash`
+- `source "$HOME/.sdkman/bin/sdkman-init.sh"`
+- `sdk install groovy`
+
+### directory 
+groopy is installed at: $HOME/.sdkman/candidates
+
+
+
+____________________
+
+
+
+## Build and Run APIS on deigo 
+### 1. Copy APIS to deigo 
+`scp locapath of apis-master yourname@deigo.oist.jp:/home/anypath`
+
+### 2. Build 
+#### 1. ask for allocation computation node 
+`srun -p compute -t 1:00:00 --pty bash`
+#### 2. build 
+`make build`
+
+### 3. Run 
+####1. aks for allocation computation node with x11
+`srun -p compute -t 1:00:00 --x11 --pty bash`
+
+#### 2. run 
+`make run`
+
+
+
 
 ## Install miniconda on deigo 
 ref: https://conda.io/projects/conda/en/latest/user-guide/install/linux.html
@@ -47,16 +100,7 @@ $PATH might be automatically cleaned up everytime when you login to deigo again,
 check PATH:
 `echo "$PATH"`
 or `echo "${PATH//:/$'\n'}"`
-## groovy: sdk install 
-ref: https://groovy-lang.org/install.html#_maven_repository
-### SDKMan install 
-Simply enter the following commands:
-- `curl -s get.sdkman.io | bash`
-- `source "$HOME/.sdkman/bin/sdkman-init.sh"`
-- `sdk install groovy`
 
-### directory 
-groopy is installed at: $HOME/.sdkman/candidates
 
 ## mongodb: manually install mongodb on deigo
 ### 1. Download binary version of installer 
