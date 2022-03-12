@@ -5,3 +5,5 @@ https://www.ritchievink.com/blog/2019/09/16/variational-inference-from-scratch/
 https://towardsdatascience.com/implement-expectation-maximization-em-algorithm-in-python-from-scratch-f1278d1b9137
 
 
+# Linear-nonlinear Poisson model 
+https://www.auditoryaging.com/tutorial-lnpmodel
